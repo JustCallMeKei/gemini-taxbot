@@ -102,8 +102,8 @@ elif st.session_state['step'] == 2:  # Step 2 asks if they want to calculate the
     with st.form(key='income_form'):
         income = st.text_input("Step 2: Enter income to calculate tax", key="income_input")
         submit_income = st.form_submit_button(label='Submit')
-        exit_income = st.form_submit_button(label='Exit')
         rerun_type = st.form_submit_button(label='Re-run previous step')
+        exit_income = st.form_submit_button(label='Exit')
 
     if submit_income:  # Then we move to step 3 if they clicked yes
         st.session_state['income'] = income
