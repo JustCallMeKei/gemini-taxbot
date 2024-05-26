@@ -130,8 +130,9 @@ elif st.session_state['step'] == 3:  # Step 3 handles the filing status of the u
     with st.form(key='filing_status_form'):
         filing_status = st.text_input("Step 3: Enter Filing Status", key="filing_status_input")
         submit_filing_status = st.form_submit_button(label='Submit')
-        exit_filing_status = st.form_submit_button(label='Exit')
         rerun_type = st.form_submit_button(label='Re-run previous step')
+        exit_filing_status = st.form_submit_button(label='Exit')
+        
 
     if submit_filing_status: 
         st.session_state['filing_status'] = filing_status
