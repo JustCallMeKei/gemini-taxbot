@@ -53,6 +53,7 @@ if st.session_state['chat_history']:
 if st.session_state['step'] == 0:
     with st.form(key='start_form'):
         start = st.text_input("Hello! Do you want to calculate your tax based on Philippine tax law? (yes/no)", key="start_input")
+        #Forms were used to avoid the webpage from returning to the very top everytime a user clicks a button.
         submit_start = st.form_submit_button(label='Submit')
         exit_start = st.form_submit_button(label='Exit')
 
